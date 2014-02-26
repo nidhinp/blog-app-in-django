@@ -1,1 +1,1 @@
-web: gunicorn djangomicroblog.wsgi:application
+web: python manage.py runserver
