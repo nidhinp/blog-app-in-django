@@ -59,11 +59,11 @@ WSGI_APPLICATION = 'djangomicroblog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djangomicroblog',
-        'USER': 'nidhin',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'NAME': 'dda4cspdnmo5pe',
+        'USER': 'knhpohoybzduuf',
+        'PASSWORD': 'pgLuJky-ytvRsO8sR7oXt539LQ',
+        'HOST': 'ec2-174-129-218-200.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
