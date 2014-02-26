@@ -1,1 +1,1 @@
-web: gunicorn paint.wsgi:application
+web: gunicorn djangomicroblog.wsgi:application
