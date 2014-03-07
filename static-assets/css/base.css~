@@ -1,0 +1,9 @@
+body {
+    background-image: url('background.jpg');
+    background-color: #cccccc;
+    color: #ffffff;
+}
+
+div {
+    color: #ffffff;
+}

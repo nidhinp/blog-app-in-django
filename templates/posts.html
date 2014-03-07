@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Recent Posts</h2>
+{% if form.errors %}
+    <p style="color: red;">
+        Please correct the error{{ form.errors|pluralize }} below.
+    </p>
+{% endif %}
+{% if posts %}
+    {% for post in posts %}
+        <p><h3>{{ post.title }}</h3></p><br>
+        <p>{{ post.body }}</p><br>
+        <p>{{ post.day }} - {{ post.time }}</p><br>
+        {% if comments %}
+            {% for comment in comments %}
+                {% if post.title == comment.title %}
+                    <p><strong>{{ comment.name }}</strong>: {{ comment.comment }}</p>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <form action="/posts/" method="post">
+            <table>
+                {{ comment_form.as_table }}
+            </table>
+            <input type="hidden" value="{{ post.title }}" name="post_title"> 
+            {% csrf_token %}
+            <input type="submit" value="Comment">
+        </form>
+        <hr>
+    {% endfor %}
+{% endif %}
+{% endblock %}
+
