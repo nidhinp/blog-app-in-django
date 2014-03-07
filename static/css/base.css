@@ -1,4 +1,9 @@
 body {
     background-image: url('background.jpg');
     background-color: #cccccc;
+    color: #ffffff;
+}
+
+a {
+    color: #ffffff;
 }
